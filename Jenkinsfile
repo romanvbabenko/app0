@@ -12,6 +12,13 @@ pipeline {
                 echo 'Testing..'
             }
         }
+        
+        staage('QA') {
+            steps {
+                input 'Do you approve the branch?'
+            }
+        }
+        
         stage('Deploy') {
             steps {
                 input 'Do you approve deployment?'
