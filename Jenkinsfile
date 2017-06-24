@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage 'Deploy' {
             steps {
-                node {
-                    echo 'deploying...'
-                }
+               echo 'deploying...'
             }
         }      
         
@@ -18,9 +16,7 @@ pipeline {
         
         stage('Done') {
             steps {
-                node {
-                    echo 'done'
-                }
+                echo 'done'
             }
         }
     }
