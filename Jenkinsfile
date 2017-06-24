@@ -3,8 +3,10 @@ pipeline {
 
     stages {
         stage 'Deploy' {
-            node {
-              echo 'deploying...'
+            steps {
+                node {
+                    echo 'deploying...'
+                }
             }
         }      
         
