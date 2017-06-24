@@ -16,6 +16,7 @@ pipeline {
         staage('QA') {
             steps {
                 input 'Do you approve the branch?'
+                echo 'Has been approved by QA'
             }
         }
         
