@@ -23,5 +23,18 @@ pipeline {
                 input 'Do u approve the build?';
             }
         }
+        
+        stage('Deploy staging') {
+            steps {
+                echo 'Deploing staging'
+                input 'Performance is OK?'
+            }
+        }
+        
+        stage('Merge into production') {
+            steps {
+                echo 'Merging production'
+            }
+        }
     }
 }
