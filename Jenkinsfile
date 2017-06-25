@@ -31,9 +31,10 @@ pipeline {
             }
         }
         
-        stage('Merge into production') {
+        stage('Merge production') {
             steps {
                 echo 'Merging production'
+                echo 'Deliting branch'
             }
         }
     }
