@@ -1,9 +1,26 @@
 pipeline {
-    agent {  }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                echo 'OK'
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            step {
+                echo 'Testing ...'
+            }
+        }
+        
+        stage('QA') {
+            step {
+                input 'Do u approve the build?';
+            }
+        }
+        
+        stage('Deploy') {
+            step {
+                echo 'Deploing ...'
             }
         }
     }
