@@ -12,15 +12,15 @@ pipeline {
             }
         }
         
-        stage('QA') {
-            steps {
-                input 'Do u approve the build?';
-            }
-        }
-        
         stage('Deploy') {
             steps {
                 echo 'Deploing ...'
+            }
+        }
+        
+        stage('QA') {
+            steps {
+                input 'Do u approve the build?';
             }
         }
     }
