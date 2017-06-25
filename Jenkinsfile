@@ -7,19 +7,19 @@ pipeline {
             }
         }
         stage('Test') {
-            step {
+            steps {
                 echo 'Testing ...'
             }
         }
         
         stage('QA') {
-            step {
+            steps {
                 input 'Do u approve the build?';
             }
         }
         
         stage('Deploy') {
-            step {
+            steps {
                 echo 'Deploing ...'
             }
         }
